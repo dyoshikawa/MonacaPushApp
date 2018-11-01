@@ -247,14 +247,21 @@ document.addEventListener("deviceready", function(){
     // デバイストークンを取得してinstallationに登録する
     window.NCMB.monaca.setDeviceToken(
         "YOUR_NCMB_APPLICATION_KEY",
-        "YOUR_NCMB_CLIENT_KEY",
-        "YOUR_FCM_SENDER_ID"
+        "YOUR_NCMB_CLIENT_KEY"
     );
 },false);
 ```
 
 * 「`YOUR_NCMB_APPLICATION_KEY`」、「`YOUR_NCMB_CLIENT_KEY`」はmobile backendのダッシュボードのアプリケーションキー、クライアントキーにそれぞれ書き換えてください
-* Android端末で動作確認を行う場合は、「`YOUR_FCM_SENDER_ID`」をFCMでプロジェクト作成時に発行されたSenderID（送信者ID）に書き換えてください
+* V2系のプラグインを使用してAndroid端末で動作確認を行う場合は、「`YOUR_FCM_SENDER_ID`」をFCMでプロジェクト作成時に発行されたSenderID（送信者ID）に書き換えてください
+
+```js
+window.NCMB.monaca.setDeviceToken(
+    "YOUR_APPLICATION_KEY",
+    "YOUR_CLIENT_KEY",
+    "YOUR_SENDER_ID"
+);
+```
 
 
 ## 参考
